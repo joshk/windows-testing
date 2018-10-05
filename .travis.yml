@@ -8,8 +8,7 @@ before_install:
   - env
   - choco list --local-only
   - export NVS_HOME=$ProgramData/nvs
-  - git clone https://github.com/joshk/nvs $NVS_HOME
-  - git checkout patch-1
+  - git clone --single-branch -b patch-1 https://github.com/joshk/nvs $NVS_HOME
   - . $NVS_HOME/nvs.sh
   - env
   - nvs add latest
