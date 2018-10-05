@@ -5,10 +5,9 @@ language: bash
 group: dev
 
 before_install:
-  - choco uninstall nvs
-  - choco install nvs
-  - refreshenv
   - choco list --local-only
   - choco info nvs
+  - export NVS_HOME=$ProgramData/nvs
+  - . $NVS_HOME/nvs.sh
   - where nvs
   - nvs add latest
