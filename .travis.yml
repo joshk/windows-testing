@@ -10,6 +10,8 @@ before_install:
   - choco uninstall nvs
   - choco install nvs
   - choco info nvs
+  - ls -la /c/Users/travis/AppData/Local
+  - ls -la /c/Users/travis/AppData/Local/nvs
   - export NVS_HOME=/c/Users/travis/AppData/Local/nvs
   - . $NVS_HOME/nvs.sh
   - where nvs
