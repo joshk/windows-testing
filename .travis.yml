@@ -7,4 +7,5 @@ group: dev
 before_install:
   - find /c -iname nvs
   - find /c -iname nvs.exe
+  - find /c -iname nvs.sh
   - iex 'nvs add latest'
