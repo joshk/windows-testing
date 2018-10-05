@@ -2,6 +2,8 @@ os: windows
 
 language: bash
 
+group: dev
+
 before_install:
   - find /c -iname nvs
   - nvs add latest
