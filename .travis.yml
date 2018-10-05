@@ -1,3 +1,6 @@
 os: windows
 
 language: bash
+
+before_install:
+  - nvs add latest
