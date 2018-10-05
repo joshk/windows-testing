@@ -7,6 +7,7 @@ group: dev
 before_install:
   - choco uninstall nvs
   - choco install nvs
+  - refreshenv
   - choco list --local-only
   - choco info nvs
   - where nvs
