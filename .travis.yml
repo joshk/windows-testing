@@ -8,6 +8,6 @@ before_install:
   - choco install nvs
   - choco list --local-only
   - ruby -v
-  - curl -v
+  - curl -V
   - find / -name nvs.sh
   - nvs add latest
