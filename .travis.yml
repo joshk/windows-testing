@@ -7,6 +7,8 @@ group: dev
 before_install:
   - env
   - ls -l $LOCALAPPDATA
+  - where choco
+  - ls -l /c/ProgramData
   - find /c -iname nvs
   - find /c -iname nvs.exe
   - find /c -iname nvs.sh
