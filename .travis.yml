@@ -6,4 +6,5 @@ group: dev
 
 before_install:
   - choco install nvs
+  - choco list --local-only
   - nvs add latest
