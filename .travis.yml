@@ -5,12 +5,17 @@ language: bash
 group: dev
 
 before_install:
+  - echo "--------------------------------------"
   - env
+  - echo "--------------------------------------"
   - choco list --local-only
+  - echo "--------------------------------------"
   - export NVS_HOME=$ProgramData/nvs
-  - git clone --single-branch -b patch-1 https://github.com/joshk/nvs $NVS_HOME
+  - git clone --single-branch -b msys_nt https://github.com/joshk/nvs $NVS_HOME
   - . $NVS_HOME/nvs.sh
+  - echo "--------------------------------------"
   - env
+  - echo "--------------------------------------"
   - nvs add latest
   - nvs use latest
   - node --version
