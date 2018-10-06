@@ -25,8 +25,5 @@ before_install:
   - git clone https://github.com/yargs/yargs
   - cd yargs
   - echo "--------------------------------------"
-  - npx npm@latest i -g npm
   - npm install
-  - node --version
-  - npm --version
   - npm t
