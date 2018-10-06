@@ -4,6 +4,11 @@ language: bash
 
 group: dev
 
+env:
+  - NODE_VERSION=6
+  - NODE_VERSION=8
+  - NODE_VERSION=10
+ 
 before_install:
   - echo "--------------------------------------"
   - env
@@ -16,8 +21,8 @@ before_install:
   - echo "--------------------------------------"
   - env
   - echo "--------------------------------------"
-  - nvs add latest
-  - nvs use latest
+  - nvs add $NODE_VERSION
+  - nvs use $NODE_VERSION
   - echo "--------------------------------------"
   - node --version
   - npm --version
