@@ -21,3 +21,12 @@ before_install:
   - echo "--------------------------------------"
   - node --version
   - npm --version
+  - echo "--------------------------------------"
+  - git clone https://github.com/yargs/yargs
+  - cd yargs
+  - echo "--------------------------------------"
+  - npm i -g npm@latest
+  - npm install
+  - node --version
+  - npm --version
+  - npm t
