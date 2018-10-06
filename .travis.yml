@@ -12,3 +12,6 @@ before_install:
   - . $NVS_HOME/nvs.sh
   - env
   - nvs add latest
+  - nvs use latest
+  - node --version
+  - npm --version
