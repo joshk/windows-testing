@@ -18,5 +18,6 @@ before_install:
   - echo "--------------------------------------"
   - nvs add latest
   - nvs use latest
+  - echo "--------------------------------------"
   - node --version
   - npm --version
