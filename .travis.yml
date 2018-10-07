@@ -23,7 +23,7 @@ before_install:
   - git clone --single-branch -b joshk-msys_nt https://github.com/joshk/nvs $NVS_HOME
   - . $NVS_HOME/nvs.sh
   - echo "--------------------------------------"
-  - env
+  - env | sort
   - echo "--------------------------------------"
   - nvs add $NODE_VERSION
   - nvs use $NODE_VERSION
