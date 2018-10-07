@@ -10,8 +10,7 @@ env:
   - NODE_VERSION=10
 
 cache:
-  edge: 
-    branch: ha-file-null
+  branch: ha-file-null
   directories:
   - "$HOME/.tmp-cache/node_modules"
 
