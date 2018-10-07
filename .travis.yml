@@ -36,4 +36,4 @@ before_install:
   - cd yargs
   - echo "--------------------------------------"
   - npm install --prefix $HOME/.tmp-cache/node_modules
-  - npm t
+  - npm t --prefix $HOME/.tmp-cache/node_modules
