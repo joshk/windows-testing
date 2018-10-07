@@ -8,7 +8,11 @@ env:
   - NODE_VERSION=6
   - NODE_VERSION=8
   - NODE_VERSION=10
- 
+
+cache:
+  directories:
+  - ~/yargs/yargs/node_modules
+
 before_install:
   - echo "--------------------------------------"
   - env
@@ -27,6 +31,7 @@ before_install:
   - node --version
   - npm --version
   - echo "--------------------------------------"
+  - cd ~
   - git clone https://github.com/yargs/yargs
   - cd yargs
   - echo "--------------------------------------"
