@@ -35,10 +35,10 @@ before_install:
   - git clone https://github.com/yargs/yargs
   - cd yargs
   - mkdir -p node_modules
-  - cp $HOME/.tmp-cache/node_modules/* node_modules/*
+  - cp -rf $HOME/.tmp-cache/node_modules node_modules
   - echo "--------------------------------------"
   - npm install
   - npm t
   - echo "--------------------------------------"
   - rm -f $HOME/.tmp-cache/node_modules/*
-  - cp node_modules/* $HOME/.tmp-cache/node_modules/*
+  - cp -rf node_modules $HOME/.tmp-cache/node_modules
