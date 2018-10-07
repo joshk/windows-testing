@@ -11,7 +11,7 @@ env:
 
 cache:
   directories:
-  - "$HOME/.npm"
+  - "$HOME/.tmp-cache/node_modules"
 
 before_install:
   - echo "--------------------------------------"
@@ -35,5 +35,5 @@ before_install:
   - git clone https://github.com/yargs/yargs
   - cd yargs
   - echo "--------------------------------------"
-  - npm ci
+  - npm install --prefix $HOME/.tmp-cache/node_modules
   - npm t
