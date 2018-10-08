@@ -1,45 +1,23 @@
 os: windows
 
-language: bash
+language: node_js
 
 group: dev
 
-env:
-  - NODE_VERSION=6
-  - NODE_VERSION=8
-  - NODE_VERSION=10
+node_js:
+  - 6
+  - 8
+  - 10
 
-cache:
-  branch: ha-file-null
-  directories:
-  - "$HOME/.tmp-cache/node_modules"
+#cache:
+#  branch: ha-file-null
+#  directories:
+#  - "$HOME/.tmp-cache/node_modules"
 
 before_install:
-  - echo "--------------------------------------"
   - env | sort
-  - echo "--------------------------------------"
   - choco list --local-only
-  - echo "--------------------------------------"
-  - export NVS_HOME=$ProgramData/nvs
-  - git clone --single-branch -b joshk-msys_nt https://github.com/joshk/nvs $NVS_HOME
-  - . $NVS_HOME/nvs.sh
-  - echo "--------------------------------------"
-  - env | sort
-  - echo "--------------------------------------"
-  - nvs add $NODE_VERSION
-  - nvs use $NODE_VERSION
-  - echo "--------------------------------------"
-  - node --version
-  - npm --version
-  - echo "--------------------------------------"
-  - cd ~
+  - cd $HOME
   - git clone https://github.com/yargs/yargs
   - cd yargs
   - mkdir -p node_modules
-  - cp -rf $HOME/.tmp-cache/node_modules node_modules
-  - echo "--------------------------------------"
-  - npm install
-  - npm t
-  - echo "--------------------------------------"
-  - rm -f $HOME/.tmp-cache/node_modules/*
-  - cp -rf node_modules $HOME/.tmp-cache/node_modules
