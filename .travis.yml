@@ -1,5 +1,7 @@
 os: windows
 
+dist: 1803-containers
+
 language: node_js
 
 group: dev
