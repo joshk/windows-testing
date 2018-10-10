@@ -18,4 +18,4 @@ before_install:
   - gimme -h
   # - ./gimme --known
   - eval "$(gimme stable)"
-  - go -v
+  - go version
