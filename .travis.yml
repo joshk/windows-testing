@@ -8,10 +8,5 @@ group: dev
 
 before_install:
   - env | sort
-  - curl https://sh.rustup.rs -sSf | sh -s -- -y
-  - git clone https://github.com/servo/rust-url
-  - cd rust-url
-  - git submodule update --init --recursive
-  - cargo build
-  - cargo test --verbose
+  - curl -sSL https://get.rvm.io | bash -s stable --ruby
 
