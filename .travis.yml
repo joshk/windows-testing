@@ -2,18 +2,10 @@ os: windows
 
 dist: 1803-containers
 
-language: go
+language: bash
 
 group: dev
 
-go:
-- stable
-
-env:
-- GIMME_OS=windows
-
 before_install:
   - env | sort
-  - gimme -h
-  # - ./gimme --known
-  - go version
+  - curl https://sh.rustup.rs -sSf | sh
