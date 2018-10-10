@@ -11,5 +11,7 @@ before_install:
   - cd $HOME
   - curl -sL -o gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
   - chmod +x gimme
+  - uname -s
+  - export GIMME_OS=windows
   - ./gimme -h
   - ./gimme stable
