@@ -15,3 +15,4 @@ before_install:
   - export GIMME_OS=windows
   - ./gimme -h
   - ./gimme stable
+  - go -v
