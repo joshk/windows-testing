@@ -14,5 +14,6 @@ before_install:
   - uname -s
   - export GIMME_OS=windows
   - ./gimme -h
+  - gimme --known
   - ./gimme stable
   - go -v
