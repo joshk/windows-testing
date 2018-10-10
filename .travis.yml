@@ -14,10 +14,6 @@ env:
 
 before_install:
   - env | sort
-  - cd $HOME
-  - mkdir -p ~/.bin
-  - export 
   - gimme -h
   # - ./gimme --known
-  - eval "$(gimme stable)"
   - go version
