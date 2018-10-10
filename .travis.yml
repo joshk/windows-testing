@@ -9,3 +9,4 @@ group: dev
 before_install:
   - env | sort
   - curl https://sh.rustup.rs -sSf | sh
+
