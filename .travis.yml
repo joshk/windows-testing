@@ -2,19 +2,21 @@ os: windows
 
 dist: 1803-containers
 
-language: bash
+language: go
 
 group: dev
+
+go:
+- stable
+
+env:
+- GIMME_OS=windows
 
 before_install:
   - env | sort
   - cd $HOME
   - mkdir -p ~/.bin
-  - curl -sL -o ~/.bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
-  - chmod +x .bin/gimme
-  - export PATH="$HOME/.bin:${PATH}"
-  - uname -s
-  - export GIMME_OS=windows
+  - export 
   - gimme -h
   # - ./gimme --known
   - eval "$(gimme stable)"
