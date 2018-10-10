@@ -2,24 +2,14 @@ os: windows
 
 dist: 1803-containers
 
-language: node_js
+language: bash
 
 group: dev
 
-node_js:
-  - 6
-  - 8
-  - 10
-
-#cache:
-#  branch: ha-file-null
-#  directories:
-#  - "$HOME/.tmp-cache/node_modules"
-
 before_install:
   - env | sort
-  - choco list --local-only
   - cd $HOME
-  - git clone https://github.com/yargs/yargs
-  - cd yargs
-  - mkdir -p node_modules
+  - curl -sL -o gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
+  - chmod +x gimme
+  - gimme -h
+  - gimme stable
