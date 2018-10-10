@@ -10,7 +10,7 @@ before_install:
   - env | sort
   - cd $HOME
   - mkdir -p ~/.bin
-  - curl -sL -o ./bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
+  - curl -sL -o ~/.bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
   - chmod +x .bin/gimme
   - export PATH="$HOME/.bin:${PATH}"
   - uname -s
