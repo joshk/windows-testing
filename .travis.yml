@@ -1,25 +1,13 @@
 os: windows
 
-dist: 1803-containers
-
-language: node_js
-
-group: dev
-
-node_js:
-  - 6
-  - 8
-  - 10
-
-#cache:
-#  branch: ha-file-null
-#  directories:
-#  - "$HOME/.tmp-cache/node_modules"
+language: bash
 
 before_install:
-  - env | sort
-  - choco list --local-only
-  - cd $HOME
-  - git clone https://github.com/yargs/yargs
-  - cd yargs
-  - mkdir -p node_modules
+  - git clone git://github.com/phpenv/phpenv.git ~/.phpenv
+  - export PATH="$HOME/.phpenv/bin:$PATH"
+  - eval "$(phpenv init -)"
+  - git clone https://github.com/php-build/php-build $(phpenv root)/plugins/php-build
+  - phpenv install 7.2
+  - phpenv rehash
+
+script: echo "nearly"
