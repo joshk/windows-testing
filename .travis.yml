@@ -11,5 +11,7 @@ before_install:
   - phpenv versions
   - phpenv install 7.2.0
   - phpenv rehash
+  - php -v
+  - php -i
 
 script: echo "nearly"
