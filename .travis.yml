@@ -7,7 +7,9 @@ before_install:
   - export PATH="$HOME/.phpenv/libexec:$PATH"
   - eval "$(phpenv init -)"
   - git clone https://github.com/php-build/php-build $(phpenv root)/plugins/php-build
-  - phpenv install 7.2
+  - phpenv help
+  - phpenv versions
+  - phpenv install 7.2.0
   - phpenv rehash
 
 script: echo "nearly"
