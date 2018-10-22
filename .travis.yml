@@ -7,7 +7,7 @@ before_install:
   - choco uninstall cmake
   - choco install cmake.install --installargs 'ADD_CMAKE_TO_PATH=System'
   - cat C:\ProgramData\chocolatey\logs\chocolatey.log
-  - which make
+  - bash -c "which make"
 
 script: echo "nearly"
 
