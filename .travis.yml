@@ -5,6 +5,7 @@ language: bash
 before_install:
   - which make || true
   - choco uninstall cmake
+  - choco uninstall cmake.install
   - choco install cmake.install --installargs 'ADD_CMAKE_TO_PATH=System'
   - cat /c/ProgramData/chocolatey/logs/chocolatey.log
   - bash -c "which make"
