@@ -9,5 +9,3 @@ before_install:
   - which make
 
 script: echo "nearly"
-
-
