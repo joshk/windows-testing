@@ -3,9 +3,9 @@ os: windows
 language: bash
 
 before_install:
-  - which make || true
-  - choco uninstall cmake
-  - choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System'
-  - which make
+  - curl -O https://raw.githubusercontent.com/kerl/kerl/master/kerl
+  - chmod a+x kerl
+  - ./kerl list releases
+  - ./kerl build 19.2 19.2
 
 script: echo "nearly"
