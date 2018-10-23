@@ -4,7 +4,7 @@ language: bash
 
 before_install:
   - curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
-  - export PATH="/c/Users/travis/.pyenv/bin:$PATH"
+  - export PATH="/c/Users/travis/.pyenv/libexec:$PATH"
   - eval "$(pyenv init -)"
   - eval "$(pyenv virtualenv-init -)"
   - pyenv install 2.7.8
