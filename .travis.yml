@@ -3,7 +3,7 @@ os: windows
 language: bash
 
 before_install:
-  - ls -la /c/Program Files/CMake/bin
+  - ls -la /c/Program\ Files/CMake/bin
   - which make
 
 script: echo "nearly"
