@@ -3,9 +3,6 @@ os: windows
 language: bash
 
 before_install:
-  - which make || true
-  - choco uninstall cmake
-  - choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System'
-  - which make
+  - curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
 
 script: echo "nearly"
